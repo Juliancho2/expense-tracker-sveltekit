@@ -5,6 +5,7 @@
   import Calendar from "$lib/components/ui/calendar/calendar.svelte";
   import X from "lucide-svelte/icons/x";
   import FileText from "lucide-svelte/icons/file-text";
+  import DollarSign from "lucide-svelte/icons/dollar-sign";
   import CalendarCog from "lucide-svelte/icons/calendar-cog";
   import { Switch } from "$lib/components/ui/switch/index.ts";
   import CalendarIcon from "lucide-svelte/icons/calendar";
@@ -146,7 +147,7 @@
             class="placeholder:text-xs h-full w-full bg-transparent outline-none"
             type="number"
           />
-          <FileText class="w-5 h-5 text-gray-500" />
+          <DollarSign class="w-5 h-5 text-gray-500" />
         </div>
         <div
           class="bg-gray-100 h-10 flex items-center border border-gray-300 px-1 rounded-md"

@@ -1,6 +1,7 @@
 <script>
     import * as Select from "$lib/components/ui/select";
     import ArrowUpRight from "lucide-svelte/icons/arrow-up-right";
+    import BarChart from "../bar-chart/BarChart.svelte";
 </script>
 
 <section class="py-10">
@@ -19,7 +20,7 @@
               </Select.Root>
         </div>
     </article>
-    <article class="my-5">
+    <article class="my-5 flex justify-between">
         <div>
             <small class="font-semibold text-base">Net Total</small>
             <div class="flex gap-4 items-end" >
@@ -29,6 +30,7 @@
                 <p class="text-gray-400 text-xs font-bold">+1.3% from last month</p>
             </div>
         </div>
+        <BarChart />
     </article>
     <article class="flex justify-between">
         <div>

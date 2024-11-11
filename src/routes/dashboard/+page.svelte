@@ -1,12 +1,11 @@
 <script>
     import Summary from "$lib/components/summary/Summary.svelte";
     import Transactions from "$lib/components/transactions/Transactions.svelte";
+    export let data;
 
-    export let data
-    const user=data.user?.user_metadata
+    const user = data?.user?.user_metadata;
 </script>
 
-
-<h2 class="text-3xl font-extrabold">¡Hello World!</h2>
+<h2 class="text-3xl font-extrabold">¡Hello World {user?.name}!</h2>
 <Summary />
 <Transactions />

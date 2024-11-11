@@ -40,9 +40,8 @@
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    const dateFormatted = new Date(
-      dateValue?.toString() || "",
-    ).toLocaleDateString() || "";
+    const dateFormatted =
+      new Date(dateValue?.toString() || "").toLocaleDateString() || "";
     formData.append("user_id", "07c56b8f-0d9c-44b7-9f5a-ac7cbfa133dc");
     formData.append("date", dateFormatted || "");
     formData.append("type", typeValue || "");
@@ -51,7 +50,7 @@
     formData.append("isRecurring", isRecurring ? "true" : "false");
     formData.append("amount", totalAmount?.toString() || "");
 
-    const res = await fetch("/api/add_transaction", {
+    const res = await fetch("/api/transaction", {
       method: "POST",
       body: formData,
     });
@@ -75,14 +74,13 @@
         type: "success",
         theme: "dark",
       });
-      
     }
   };
   const handleChangeSelect = (id) => {
     selectedCategory = id;
   };
   onMount(async () => {
-    const res = await fetch("/api/getCategories");
+    const res = await fetch("/api/category");
     const data = await res.json();
     categories = data;
 

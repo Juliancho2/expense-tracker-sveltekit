@@ -5,7 +5,7 @@
     import * as Popover from "$lib/components/ui/popover";
     import { page } from "$app/stores";
     import Button from "../ui/button/button.svelte";
-    import { goto } from '$app/navigation';
+    import { goto } from "$app/navigation";
 
     export let avatarUrl: string | undefined = "";
 
@@ -25,12 +25,12 @@
     ];
     const logOut = async () => {
         await $page.data.supabase.auth.signOut();
-        goto('/login');
-    };  
+        goto("/login");
+    };
 </script>
 
 <header class="w-full py-7">
-    <nav class="container mx-auto flex justify-between items-center">
+    <nav class="px-24 mx-auto flex justify-between items-center">
         <img src="https://lucide.dev/logo.dark.svg" class="w-6" alt="" />
         <ul class="w-full flex gap-10 justify-center">
             {#each links as link}
